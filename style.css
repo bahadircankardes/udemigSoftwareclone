@@ -1,0 +1,87 @@
+/*Genel CSS değişkenlerini tanımlıyoruz. */
+:root {
+    --maincolor:#669CF4;
+    --backgrouncolor:#35424A;
+    --white:#F4F4F4;
+}
+
+/*HTML ve body etiketlerinin temel düzenlemelerini yapıoruz.*/
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    
+}
+
+/*body etiketlerine ortak bir stillendirme*/
+
+body {
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+    overflow:hidden;/*taşmaları engellemek için*/
+    flex: 1;/*flex düzeninin esnemesini sağlıyoruz*/
+    
+
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    
+}
+
+header {
+    background-color: var(--backgrouncolor);
+    color: #FFFFFF;
+    min-height: 70px;
+    padding-top: 30px;
+    border-bottom: var(--maincolor) 3px solid;
+}
+
+header a {
+    color:#FFFFFF;
+    text-decoration: none; /*a etiketlerinin çizgilerini kaldırmak için*/
+    text-transform: uppercase;
+}
+
+header ul {
+    list-style-type: none; /*listedeki noktaları kaldırmak için.*/
+
+}
+
+/*listeyi satır haline getirdik ve <li> etiketi blok bir element olduğundan
+inline elemente çevirdik */
+header li {
+    float: left;
+    display: inline;
+    padding: 0 20px;
+}
+
+/**/
+
+#branding h1{
+    margin: 0;
+
+}
+
+header nav{
+    float: right;
+    margin-top: 10px;
+}
+
+header .highlight, 
+header .current a{
+    color: var(--maincolor);
+    font-weight:bold;
+}
