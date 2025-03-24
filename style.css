@@ -1,7 +1,7 @@
 /*Genel CSS değişkenlerini tanımlıyoruz. */
 :root {
     --maincolor:#669CF4;
-    --backgrouncolor:#35424A;
+    --background:#35424A;
     --white:#F4F4F4;
 }
 
@@ -26,14 +26,17 @@ body {
 
 }
 
-.container{
+.container {
     width: 80%;
     margin: auto;
     overflow:hidden;/*taşmaları engellemek için*/
     flex: 1;/*flex düzeninin esnemesini sağlıyoruz*/
-    
-
 }
+
+/* #header-container {
+    display: flex;
+    align-items: center;
+} */
 
 ul {
     margin: 0;
@@ -42,7 +45,7 @@ ul {
 }
 
 header {
-    background-color: var(--backgrouncolor);
+    background-color: var(--background);
     color: #FFFFFF;
     min-height: 70px;
     padding-top: 30px;
@@ -70,14 +73,18 @@ header li {
 
 /**/
 
-#branding h1{
+
+
+header #branding h1{
     margin: 0;
 
 }
 
 header nav{
     float: right;
-    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    
 }
 
 header .highlight, 
@@ -85,3 +92,133 @@ header .current a{
     color: var(--maincolor);
     font-weight:bold;
 }
+
+/*showcase */
+
+#showcase{
+    background: url(/img/showcase.jpg) no-repeat 0 -400px;
+    min-height: 400px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+#showcase h1 {
+    font-size: 55px;
+    margin-top: 100px;
+    margin-bottom: 10px;
+}
+
+#showcase p{
+    font-size: 20px;
+}
+
+#newsletter{
+    background: var(--background);
+    color: #FFFFFF;
+    padding: 15px;
+}
+#newsletter h1 {
+    float: left;
+}
+
+#newsletter form {
+    float: right;
+    margin-top: 15px;
+}
+
+#newsletter input{
+    height: 25px;
+    width: 250px;
+    padding: 4px;
+}
+
+.button_1{
+    height: 38px;
+    background: var(--maincolor);
+    border: 0;
+    border-radius: 5px;
+    color: #FFFFFF;
+    padding: 0 20px;
+}
+
+/*boxes*/
+#boxes{
+    margin-top: 20px;
+}
+
+#boxes .box{
+    float: left;
+    width: 30%;
+    padding: 10px;
+    text-align: center;
+
+}
+
+#boxes .box img{
+    width: 90px;
+}
+
+ul#services li{
+    background-color: #e6e6e6;
+    border: #ccc solid 1px;
+    list-style: none;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+.quote div{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+}
+
+.quote div input{
+    padding:5px;
+}
+
+footer{
+    background: var(--maincolor);
+    padding: 15px;
+    color: #FFFFFF;
+    text-align: center;
+    margin-top: auto;
+}
+
+.dark {
+    background: var(--background);
+    padding: 15px;
+    color: #FFFFFF;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#main-col {
+    float:left;
+    width: 60%;
+}
+
+#sidebar {
+    float: right;
+    width: 30%;
+}
+
+/*Media queries*/
+
+@media screen and (max-width: 768px){
+
+/*cihaz ekran genişliği maksimum 768pxi geçene kadar bu komutları uygula, geçerse üstteki komutları uygula*/
+    #main-col, aside#sidebar, header nav {
+/* kapsayıcı içindeki iki elementten sadece birisine float verirsek diğer elementi umursamadan kendisini sağa ya da sola hizalayacaktır. Fakat her ikisine de float: none; verirsek normal HTML kurallarına göre hizalanacaktırlar. */
+        margin: auto;
+        float: none;
+        width: 100%;
+    }
+
+    header #branding h1{
+        text-align: center;
+    }
+
+}
+
+
+
+
+
