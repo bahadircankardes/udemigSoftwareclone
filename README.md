@@ -1,7 +1,5 @@
 # udemigSoftwareclone
 
-# udemigSoftwareclone
-
 A clean, responsive, and modern landing page built for a software or creative agency. Designed with a focus on user experience, visual clarity, and professional branding, this static website effectively communicates core services and values.
 
 # Preview
